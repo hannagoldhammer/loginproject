@@ -161,7 +161,7 @@ router.get("/wishlist/:id", verifyToken, async (req, res) => {
     //verifyToken
 
     //hård kodat user id från user collection. // Jag har ändrat
-    const user = await User.findOne({ _id: req.body.user._id })
+        const user = await User.findOne({ _id: req.body.user._id })
     //user hämtar bara ett objekt. 
     //User.find() hämtar array of object 
 

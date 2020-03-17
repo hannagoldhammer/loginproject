@@ -16,7 +16,7 @@ module.exports = (req, res, next) => {
         console.log("user info" + user);
         // Tilldelat den decodade informationen till req
         // Varför vill man göra detta? // Pappa
-        req = user;
+        req.body = user;
         next();
     }else {
         res.send("You are not authorised.");
